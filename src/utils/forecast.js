@@ -11,9 +11,10 @@ const forecast = (location, callback) =>{
             callback('Unable to find location try again',undefined)
         }
         else{
+            
             callback(undefined,
-                body.current.condition.text + '. It us currently ' + body.current.temp_c + ' degress out. And There is a %' + body.current.precip_mm + ' probability rain.'
-            )
+                body.current.condition.text + '. It us currently ' + body.current.temp_c + ' degress out. And There is a %' + body.current.precip_mm + ' probability rain. It feels like ' + body.current.feelslike_c + ' degree outside.'
+                )
         }
     })
 }
